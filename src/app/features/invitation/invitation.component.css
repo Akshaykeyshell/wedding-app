@@ -1,0 +1,537 @@
+/* Main view*/
+.content-view {
+    display: flex;
+    flex-direction: column;
+    background:white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative; 
+}
+
+/* pages layout*/
+.abstract-view, .invitation-view {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 5%;
+    gap: 5%;
+    position: relative; 
+    z-index: 1; 
+    color: white;
+ 
+}
+
+
+.background-slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: zoomInOut 80s ease-in-out infinite;
+    background-image: url('/pic1.jpeg');
+    z-index: 0;
+    opacity: 0.8;
+  }
+  /* @keyframes zoomInOut {
+    0% {
+      background-image: url('/pic1.jpeg');
+      transform: scale(1.4);
+      opacity: 0.2;
+    }
+
+      25% {
+          transform: scale(1.3);
+          opacity: 0.8;
+      }
+      50% {
+          transform: scale(1.2);
+          opacity: 0.8;
+      }
+      75% {
+          transform: scale(1.1);
+          opacity: 0.8;
+      }
+
+      100% {
+          transform: scale(1);
+          opacity: 0.8;
+          filter: grayscale(1);
+      }
+      
+  } */
+  /* @keyframes zoomInOut {
+    0% {
+      background-image: url('/pic1.jpeg');
+      transform: scale(1.4);
+      opacity: 0.2;
+    }
+    5% {
+      transform: scale(1.3);
+      opacity: 0.8;
+    }
+    10% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+    15% {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+    18% {
+      background-image: url('/pic2.jpeg');
+      transform: scale(1.4);
+      opacity: 0.2;
+    }
+    19% {
+      background-image: url('/pic1.jpeg');
+      transform: scale(1.4);
+      opacity: 0.2;
+    }
+    20% {
+      background-image: url('/pic2.jpeg');
+      transform: scale(1.3);
+      opacity: 0.8;
+    transform: scale(1.4); 
+    opacity: 0.2;
+    }
+
+      25% {
+          transform: scale(1.2);
+          opacity: 0.8;
+      }
+      30% {
+          transform: scale(1.1);
+          opacity: 0.8;
+      }
+      33% {
+          background-image: url('/pic4.jpeg');
+          transform: scale(1.4);
+          opacity: 0.2;
+      }
+      34% {
+          background-image: url('/pic2.jpeg');
+          transform: scale(1.4);
+          opacity: 0.2;
+      }
+      35% {
+          background-image: url('/pic4.jpeg');
+          transform: scale(1.3);
+          opacity: 0.8;
+      }
+      40% {
+          transform: scale(1.2);
+          opacity: 0.8;
+      }
+      45% {
+          transform: scale(1.1);
+          opacity: 0.8;
+      }
+      48% {
+          background-image: url('/pic2.jpeg');
+          transform: scale(1.4);
+          opacity: 0.2;
+      }
+      49% {
+          background-image: url('/pic4.jpeg');
+          transform: scale(1.4);
+          opacity: 0.2;
+      }
+      50% {
+          background-image: url('/pic5.jpeg');
+          transform: scale(1.3);
+          opacity: 0.8;
+      }
+      55% {
+          transform: scale(1.2);
+          opacity: 0.8;
+      }
+      60% {
+          transform: scale(1.1);
+          opacity: 0.8;
+      }
+      63% {
+          background-image: url('/pic5.jpeg');
+          transform: scale(1.4);
+          opacity: 0.2;
+      }
+      64% {
+          background-image: url('/pic4.jpeg');
+          transform: scale(1.4);
+          opacity: 0.2;
+      }
+      65% {
+          background-image: url('/pic6.jpeg');
+          transform: scale(1.3);
+          opacity: 0.8;
+      }
+      70% {
+          transform: scale(1.2);
+          opacity: 0.8;
+      }
+      75% {
+          transform: scale(1.1);
+          opacity: 0.8;
+      }
+      98% {
+          background-image: url('/pic1.jpeg');
+          transform: scale(1.4);
+          opacity: 0.2;
+      }
+      99% {
+          background-image: url('/pic5.jpeg');
+          transform: scale(1.4);
+          opacity: 0.2;
+      }
+      100% {
+          background-image: url('/pic1.jpeg');
+          transform: scale(1.3);
+          opacity: 0.8;
+      }
+      
+  } */
+
+.abstract-view .name-view
+{
+    display: flex;
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+}
+.abstract-view .name-view{
+    z-index: 2;
+}
+
+.abstract-view .normal-view {
+    display: flex;
+    font-size: large;
+    font-family: Arial, sans-serif;
+    z-index: 2;
+}
+
+/* timer view and styles*/
+.abstract-view .timer-view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60vw;
+    z-index: 2;
+}
+
+.abstract-view .timer-bg-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    flex-direction: column;
+}
+
+
+.abstract-view .timer-text
+ {
+    color: rgb(200, 200, 221);
+    font-size: xx-large;
+    font-family: 'Satisfy', cursive;
+    font-weight: 1000;
+}
+
+.abstract-view .timer-format {
+    font-size: x-large;
+    color: rgb(200, 200, 221);
+    font-family: 'Dancing Script', cursive;
+    font-weight: 1000;
+}
+
+.vstack{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5%;
+    gap: 5%;
+    position: relative;
+}
+
+/* Invitation Page */
+
+.invitation-view h2, 
+.invitation-view p {
+    color: white;
+
+}
+
+
+.invitation-view {
+    background-color: black;
+    color: #fff;
+    padding: 10%;
+}
+
+.invitation-background {
+    position: absolute;
+    top: 1%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/cherry11.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center;
+    z-index: 0; 
+    opacity: 0.7; 
+}
+
+.invitation-view .invitation-content {
+    max-width: 800px;
+    text-align: center;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.invitation-view h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+/* Font styles*/
+.normal-font{
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+}
+.greetings-font{
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: 'Allure', cursive;
+}
+
+
+/* Cardview */
+.cards-view {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+
+  /* Scrollable Cards styles */
+  .cards-view .scrollable-cards {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    background: white;
+    gap: 1rem;
+    height: 90%;
+    width: 100%;
+    position: relative;
+  
+  }
+
+    /* Hide the bar of the scrollbar */
+  .scrollable-cards::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.scrollable-cards {
+    -ms-overflow-style: none;
+    scrollbar-width: none;    
+}
+  
+  /* Container for card view and it's body */ 
+  .cards-view .scrollable-cards .card-container{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 35%; 
+    max-width: 300px;
+    min-width: 200px;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    position: relative;
+  
+  }
+  
+  .cards-view .scrollable-cards .card {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem;
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  
+  /* Handle card image block */ 
+  .cards-view .scrollable-cards .card-image{
+    display: block;
+    align-items: center;
+    font-size: small;
+    height: 100%;
+    width: 100%;
+    padding: 1%;
+    border-radius: 10px;
+  }
+  
+
+  
+  /* Scroll button styles */
+  .cards-view .scroll-button, .scroll-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px; 
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(179, 179, 221);
+    border-radius: 50px;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    z-index: 1;
+  }
+    /* Scroll button styles */
+  .cards-view .scroll-button {
+        right: 0;
+      }
+  .cards-view .scroll-left {
+        left: 0;
+      }
+
+    /* for cards view image display */
+  .fullscreen-overlay{
+    display: none;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .fullscreen-image{
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  .logo-view{
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    align-items: center;
+
+  }
+  .logo-image{
+    height: 30px;
+    width: 30px;
+  }
+  .log-text{
+    font-size: smaller;
+
+  }
+
+
+
+
+/*Layout adjustments*/
+  @media (max-width:480px){
+    .abstract-view .timer-text
+    {
+       font-size: larger;
+   }
+   
+   .abstract-view .timer-format {
+       font-size: large;
+
+   }
+}
+
+@media (max-width:910px){
+    .abstract-view .name-view
+    {
+        font-size: 1.6rem;
+    }
+    .abstract-view .normal-view {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-height:700px){
+    .normal-font{
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+    .greetings-font{
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-height:480px){
+    .normal-font{
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+    .greetings-font{
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+}
+
+@media (max-height:380px){
+    .normal-font{
+        font-size: 0.7rem;
+        line-height: 1.0;
+    }
+    .greetings-font{
+        font-size: 0.7rem;
+        line-height: 1.0;
+    }
+}
+@media (max-height:280px){
+    .normal-font{
+        font-size: 0.5rem;
+        line-height: 0.8;
+    }
+    .greetings-font{
+        font-size: 0.5rem;
+        line-height: 0.8;
+    }
+}

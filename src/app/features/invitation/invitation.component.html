@@ -1,0 +1,120 @@
+
+<style>
+  /* customizable snowflake styling */
+  .snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
+  }
+  
+  .snowflake,.snowflake .inner{animation-iteration-count:infinite;animation-play-state:running}@keyframes snowflakes-fall{0%{transform:translateY(0)}100%{transform:translateY(110vh)}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;user-select:none;cursor:default;animation-name:snowflakes-shake;animation-duration:3s;animation-timing-function:ease-in-out}.snowflake .inner{animation-duration:10s;animation-name:snowflakes-fall;animation-timing-function:linear}.snowflake:nth-of-type(0){left:1%;animation-delay:0s}.snowflake:nth-of-type(0) .inner{animation-delay:0s}.snowflake:first-of-type{left:10%;animation-delay:1s}.snowflake:first-of-type .inner,.snowflake:nth-of-type(8) .inner{animation-delay:1s}.snowflake:nth-of-type(2){left:20%;animation-delay:.5s}.snowflake:nth-of-type(2) .inner,.snowflake:nth-of-type(6) .inner{animation-delay:6s}.snowflake:nth-of-type(3){left:30%;animation-delay:2s}.snowflake:nth-of-type(11) .inner,.snowflake:nth-of-type(3) .inner{animation-delay:4s}.snowflake:nth-of-type(4){left:40%;animation-delay:2s}.snowflake:nth-of-type(10) .inner,.snowflake:nth-of-type(4) .inner{animation-delay:2s}.snowflake:nth-of-type(5){left:50%;animation-delay:3s}.snowflake:nth-of-type(5) .inner{animation-delay:8s}.snowflake:nth-of-type(6){left:60%;animation-delay:2s}.snowflake:nth-of-type(7){left:70%;animation-delay:1s}.snowflake:nth-of-type(7) .inner{animation-delay:2.5s}.snowflake:nth-of-type(8){left:80%;animation-delay:0s}.snowflake:nth-of-type(9){left:90%;animation-delay:1.5s}.snowflake:nth-of-type(9) .inner{animation-delay:3s}.snowflake:nth-of-type(10){left:25%;animation-delay:0s}.snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+  </style>
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">
+      <img img src ="https://img.icons8.com/emoji/48/000000/cherry-blossom.png" class="inner">
+    </div>
+    <div class="snowflake">
+      <img img src ="https://img.icons8.com/emoji/48/000000/cherry-blossom.png" class="inner">
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <img img src ="https://img.icons8.com/emoji/48/000000/cherry-blossom.png" class="inner">
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+    <div class="snowflake">
+      <img img src ="https://img.icons8.com/emoji/48/000000/cherry-blossom.png" class="inner">
+    </div>
+    <div class="snowflake">
+      <div class="inner">❅</div>
+    </div>
+  </div>
+  
+  <div class="content-view">
+    <!-- First Page: Abstract View -->
+    <div class="abstract-view">
+      <!-- Background Slideshow Container -->
+      <div class="background-slideshow"></div>
+      <!-- <div class="name-view">Two souls with but a single thought, two hearts that beat as one.</div> -->
+      <div class="vstack">
+        <div class="name-view">Ragin Mathew & Anu Prize</div>
+        <div class="normal-view">We are getting married September 16,2024</div>
+      </div>
+      <div class="timer-view">
+        <div class="timer-bg-view">
+          <div class="timer-text">{{ days }} </div>
+          <div class="timer-format">Days</div>
+        </div>
+        <div class="timer-bg-view">
+          <div class="timer-text">{{ hours }} </div>
+          <div class="timer-format">Hours</div>
+        </div>
+        <div class="timer-bg-view">
+          <div class="timer-text">{{ minutes }}</div>
+          <div class="timer-format">Minutes</div>
+        </div>
+        <div class="timer-bg-view">
+          <div class="timer-text">{{ seconds }} </div>
+          <div class="timer-format">Seconds</div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Third Page: Invitation View -->
+    <div class="invitation-view">
+      <div class="invitation-background"></div>
+      <div class="invitation-content">
+          <h2 class="greetings-font">Invitation</h2>
+          <p class="normal-font">"This is the Lord's doing; it is marvellous in our eyes"</p>
+          <p class="normal-font">(Psalms 118:23)</p>
+          <p class="greetings-font">Mr. Mathew N.C (Babychen) & Mrs. Saly Mathew cordially invite your esteemed presence and prayers with family on the auspicious occasion of the wedding of our son Ragin Mathew and Anu Prise, D/o Mr. Prise Joseph & Mrs. Beena Prise, which will be solemnized by the grace of God.</p>
+          <p class="normal-font">Date: 16th September 2024 | Time: 3:30 PM</p>
+          <p class="normal-font">Venue: Holy Family Church, Kiliyasthanadam | Christuraj Church Auditorium, Rajamudy</p>
+      </div>
+    </div>
+    <div class="cards-view">
+      <!-- Horizontally scrollable cards -->
+      <section class="scrollable-cards">
+        <div class="card-container" *ngFor="let image of cards">
+          <!-- Card Image -->
+          <div class="card">
+            <img [src]="image" class="card-image" (click)="openFullscreen(image)">
+          </div>
+        </div>
+      </section>
+      <div class="scroll-left" (click)="scrollCards('left')">
+        <mat-icon>chevron_left</mat-icon>
+      </div>
+      <div class="scroll-button" (click)="scrollCards('right')">
+        <mat-icon>chevron_right</mat-icon>
+      </div>
+    </div>
+    <div class="fullscreen-overlay" #fullscreenOverlay>
+      <img [src]="selectedImage" class="fullscreen-image">
+      <button class="close-button" (click)="closeFullscreen()">X</button>
+    </div>
+    <div class="logo-view">
+      <img class="logo-image" src="logo.png" alt="logo">
+      <div class="logo-text">Developed by Keyshell IT Solutions</div>
+    </div>
+  </div>
+   
